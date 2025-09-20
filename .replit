@@ -58,3 +58,8 @@ exposeLocalhost = true
 [[ports]]
 localPort = 46099
 externalPort = 3000
+
+[deployment]
+deploymentTarget = "vm"
+run = ["bash", "-c", "cd app/frontend && npm run preview -- --host 0.0.0.0 --port 5000"]
+build = ["bash", "-c", "cd app/frontend && npm run build"]
